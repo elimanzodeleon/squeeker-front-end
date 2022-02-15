@@ -14,6 +14,13 @@ const NavBar = () => {
   const [isSqueekModalOpen, setIsSqueekModalOpen] = useState(false);
   const router = useRouter();
   const { data, loading, error } = useCurrentUserQuery();
+
+  if (error) {
+    console.log('currentuser query error: ', error);
+  }
+
+  console.log('user query result: ', data);
+
   const [
     logOut,
     { data: logOutData, loading: loadingData, error: logOutError, client },

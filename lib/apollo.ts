@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 import { relayStylePagination } from '@apollo/client/utilities';
 
 const link = new HttpLink({
-  uri: process.env.GRAPHQL_SERVER,
+  uri: process.env.NEXT_PUBLIC_GRAPHQL_SERVER,
   credentials: 'include',
 });
 
