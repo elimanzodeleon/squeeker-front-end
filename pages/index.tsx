@@ -7,7 +7,7 @@ import SignUpModal from '../components/SignUpModal';
 import ForgotPasswordModal from '../components/ForgotPasswordModal';
 import { useCurrentUserQuery } from '../generated/graphql';
 
-const index: NextPage = () => {
+const LandingPage: NextPage = () => {
   const {
     data: currentUserData,
     loading: currentUserLoading,
@@ -73,4 +73,4 @@ const index: NextPage = () => {
   );
 };
 
-export default index;
+export default LandingPage;
