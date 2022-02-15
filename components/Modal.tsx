@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { motion } from 'framer-motion';
 import { NextRouter } from 'next/router';
-import { useRegisterMutation, MeQuery, MeDocument } from '../generated/graphql';
+import { useRegisterMutation } from '../generated/graphql';
 import { MdClose } from 'react-icons/md';
 
 const modalVariant = {
