@@ -1,0 +1,17 @@
+mutation CreatePost($text: String!) {
+  createPost(text: $text) {
+    code
+    success
+    message
+    post {
+      id
+      text
+      points
+      createdAt
+      voteStatus
+      user {
+        ...RegularUser
+      }
+    }
+  }
+}

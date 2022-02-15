@@ -1,0 +1,14 @@
+query UserPosts($first: Int!, $after: String, $username: String) {
+  userPosts(first: $first, after: $after, username: $username) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      cursor
+      node {
+        ...PostSnippet
+      }
+    }
+  }
+}

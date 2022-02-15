@@ -1,0 +1,14 @@
+query HomePosts($first: Int!, $after: String) {
+  homePosts(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        ...PostSnippet
+      }
+      cursor
+    }
+  }
+}
