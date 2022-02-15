@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 import { relayStylePagination } from '@apollo/client/utilities';
 
 const link = new HttpLink({
-  uri: 'http://137.184.114.248:4000/graphql',
+  uri: process.env.GRAPHQL_SERVER,
   credentials: 'include',
 });
 

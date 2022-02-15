@@ -62,7 +62,7 @@ const SignUpModal: React.FC<Props> = ({ setIsModalOpen, router }) => {
               router.push('/home');
             }
           } catch (err) {
-            console.log(err.message);
+            console.log((err as any).message);
           }
         }}
         validationSchema={SignUpSchema}
